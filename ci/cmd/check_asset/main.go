@@ -81,11 +81,11 @@ func main() {
 		println(string(buff))
 		panic(err)
 	}
-	for _, asset := range release.Assets {
-		if asset.Name == releaseFileName {
-			println("::set-output name=skip_build::true")
-			os.Exit(0)
-		}
-	}
+	//for _, asset := range release.Assets {
+	//	if asset.Name == releaseFileName {
+	//		println("::set-output name=skip_build::true")
+	//		os.Exit(0)
+	//	}
+	//}
 	print("::set-output name=skip_build::false")
 }
